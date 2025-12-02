@@ -1,0 +1,121 @@
+<!DOCTYPE html><html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Project</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+            color: #fff;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(12px);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        h2 {
+            border-left: 5px solid #7b5cff;
+            padding-left: 10px;
+            font-size: 1.6rem;
+        }
+        img, video {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="display:flex;justify-content:center;gap:25px;margin-bottom:15px;font-size:1rem;">
+            <a href="#about" style="color:#cfcfff;text-decoration:none;">About</a>
+            <a href="#images" style="color:#cfcfff;text-decoration:none;">Images</a>
+            <a href="#video" style="color:#cfcfff;text-decoration:none;">Video</a>
+            <a href="#team" style="color:#cfcfff;text-decoration:none;">Team</a>
+        </nav>
+        <h1>SGTC Tesla Coil</h1>
+        <p>Short description about the project</p>
+    </header><div class="container">
+    <h2>A Spark Gap Tesla Coil is a device that generates high voltage</h2>
+    <p>A Spark Gap Tesla Coil (SGTC) is a type of high voltage resonant transformer that uses a spark gap to switch power into a resonant primary circuit. It is one of the simplest and most common types of Tesla coils people build..</p>
+
+    <h2>Images</h2>
+    <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:15px;">
+        <img src="Images/image1.jpg" alt="Project image 1">
+        <img src="Images/image2.jpg" alt="Project image 2">
+        <img src="Images/image3.jpg" alt="Project image 3">
+        <img src="Images/image4.jpg" alt="Project image 4">
+        <img src="Images/image5.jpg" alt="Project image 5">
+        <img src="Images/image6.jpg" alt="Project image 6">
+    </div>
+
+    <h2>Video Demo</h2>
+    <video controls>
+        <source src="Videos/project-video.mp4" type="video/mp4">
+        Your browser does not support video tag.
+    </video>
+</div>
+
+<script>
+        document.body.style.opacity = 0;
+        window.onload = function() {
+            let fade = 0;
+            let timer = setInterval(function(){
+                if(fade >= 1) clearInterval(timer);
+                fade += 0.02;
+                document.body.style.opacity = fade;
+            }, 20);
+        }
+    </script><div class="container" id="team" style="margin-top:30px;">
+    <h2>Team Members</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;margin-top:15px;">
+        <div>
+            <img src="members/member1.jpg" alt="Team Member 1" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:10px;">
+            <h3 style="margin:0;font-size:1.1rem;">Abhiraj pawar</h3>
+            <p style="opacity:0.8;font-size:0.9rem;">Member</p>
+        </div>
+        <div>
+            <img src="members/member2.jpg" alt="Team Member 2" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:10px;">
+            <h3 style="margin:0;font-size:1.1rem;">Yashwardhan Gaikwad</h3>
+            <p style="opacity:0.8;font-size:0.9rem;">member</p>
+        </div>
+        <div>
+            <img src="members/member3.jpg" alt="Team Member 3" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:10px;">
+            <h3 style="margin:0;font-size:1.1rem;">Rushikesh Gaikwad</h3>
+            <p style="opacity:0.8;font-size:0.9rem;">member</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
